@@ -1,6 +1,6 @@
-package app.controle.observador;
+package app.observer.observador;
 
-import app.controle.observador.Observador;
+import app.observer.observador.Observador;
 
 /**
  * Classe que observa mudanças nas quantidades e registra no console:

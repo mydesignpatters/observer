@@ -1,4 +1,4 @@
-package app.controle;
+package app.observer;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

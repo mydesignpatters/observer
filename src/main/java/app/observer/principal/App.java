@@ -1,23 +1,26 @@
-package app.controle.principal;
+package app.observer.principal;
 
-import app.controle.observador.AcoesLogger;
-import app.controle.observador.EnviarMensagem;
-import app.controle.observador.GraficoBarras;
-import app.controle.negocio.CarteiraAcoes;
+import app.observer.negocio.CarteiraAcoes;
+import app.observer.observador.AcoesLogger;
+import app.observer.observador.EnviarMensagem;
+import app.observer.observador.GraficoBarras;
 
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Teste do padrao Observer");
-
+        
+        CarteiraAcoes carteiraAcoes = new CarteiraAcoes();
+        
         GraficoBarras graficoBarras = new GraficoBarras();
         AcoesLogger acoesLogger = new AcoesLogger();
-        CarteiraAcoes carteiraAcoes = new CarteiraAcoes();
         EnviarMensagem enviarMensagem = new EnviarMensagem();
 
+        //Adicionar os observadores 
         carteiraAcoes.addObservador(graficoBarras);
         carteiraAcoes.addObservador(acoesLogger);
         carteiraAcoes.addObservador(enviarMensagem);
 
+        //Para cada mudanca na CarteiraAcoes, todos os observadores sao notificados
         Thread.sleep(2000);
         carteiraAcoes.adicionaAcoes("COMP02", 200);
 
@@ -41,6 +44,7 @@ public class App {
 
         Thread.sleep(2000);
         carteiraAcoes.adicionaAcoes("ACDF89", 300);
+        
         Thread.sleep(2000);
         carteiraAcoes.adicionaAcoes("COMP02", 200);
 

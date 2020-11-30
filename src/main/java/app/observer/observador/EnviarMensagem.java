@@ -1,4 +1,4 @@
-package app.controle.observador;
+package app.observer.observador;
 
 import java.util.Date;
 

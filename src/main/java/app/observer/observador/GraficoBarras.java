@@ -1,4 +1,4 @@
-package app.controle.observador;
+package app.observer.observador;
 
 import javax.swing.JFrame;
 

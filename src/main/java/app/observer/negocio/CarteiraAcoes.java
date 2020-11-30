@@ -1,11 +1,11 @@
-package app.controle.negocio;
+package app.observer.negocio;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import app.controle.observador.Observador;
+import app.observer.observador.Observador;
 
 public class CarteiraAcoes {
     private Map<String, Integer> acoes = new HashMap<>();
